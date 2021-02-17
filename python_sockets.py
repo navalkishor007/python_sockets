@@ -9,4 +9,7 @@ def main():
     s.listen(5)
     c,add=s.accept()
     print("Connection established")
+    msg = c.recv(1024)
+    print(msg)
+    s.send(b'Hello Sagar')
 main()
